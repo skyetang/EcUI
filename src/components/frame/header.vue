@@ -19,9 +19,9 @@
 
 <script>
   import axios from 'axios';
-  import userLogo from '../../../assets/images/userLogo.png';
-  import adminLogo from '../../../assets/images/adminLogo.png';
-  import entLogo from '../../../assets/images/entLogo.png';
+  import userLogo from '../../assets/images/userLogo.png';
+  import adminLogo from '../../assets/images/adminLogo.png';
+  import entLogo from '../../assets/images/entLogo.png';
 
   export default {
     name: 'ecw-header',

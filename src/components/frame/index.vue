@@ -1,25 +1,25 @@
 <template>
   <div id="app">
-    <ecw-header></ecw-header>
+    <ec-header></ec-header>
     <side-nav></side-nav>
     <container></container>
   </div>
 </template>
 
 <script>
-  import ECWHeader from './header';
-  import SideNav from './sideNav';
+  import EcHeader from './header';
+  import SideNav from './sideNav.vue';
   import Container from './container';
 
   export default {
     components: {
       SideNav,
       Container,
-      'ecw-header': ECWHeader,
+      EcHeader,
     },
   };
 </script>
 
 <style lang="less">
-  @import "./frame.less";
+  @import "../../assets/style/frame.less";
 </style>

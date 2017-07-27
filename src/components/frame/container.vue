@@ -1,6 +1,6 @@
 <script>
   export default{
-    name: 'container',
+    name: 'ec-container',
   };
 </script>
 <template>

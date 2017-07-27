@@ -24,7 +24,7 @@
   import entLogo from '../../assets/images/entLogo.png';
 
   export default {
-    name: 'ecw-header',
+    name: 'ec-header',
     data() {
       return {
         /* 企业logo */

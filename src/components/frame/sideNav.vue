@@ -18,7 +18,7 @@
 
 <script>
   export default {
-    name: 'side-nav',
+    name: 'ec-side-nav',
   };
 </script>
 

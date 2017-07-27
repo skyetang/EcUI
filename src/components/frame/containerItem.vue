@@ -1,0 +1,33 @@
+<script>
+  export default{
+    name: 'ec-container-item',
+    props: {
+      width: {
+        type: String,
+        default: '',
+      },
+    },
+    computed: {
+      itemStyle() {
+        let s = { flex: 1 };
+        if (this.width !== '') {
+          s = { width: this.width };
+        }
+        return s;
+      },
+    },
+  };
+</script>
+<template>
+  <div class="container-item" :style="itemStyle">
+    <div class="item-head">
+      <slot name="head">
+      </slot>
+    </div>
+    <div class="item-body">
+      <slot></slot>
+    </div>
+  </div>
+</template>
+<style lang="less">
+</style>

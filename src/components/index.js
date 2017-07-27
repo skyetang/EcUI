@@ -5,11 +5,13 @@
 import EcHeader from './frame/header';
 import EcContainer from './frame/container';
 import EcSideNav from './frame/sideNav';
+import EcContainerItem from './frame/containerItem';
 
 const components = {
   EcHeader,
   EcContainer,
   EcSideNav,
+  EcContainerItem,
 };
 
 const install = (Vue) => {

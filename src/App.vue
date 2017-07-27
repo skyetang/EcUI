@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import FrameWork from '@/components/frame/index';
+  import FrameWork from '@/example/app';
 
   export default {
     components: {

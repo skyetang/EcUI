@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="header">
-      <img class="log-img" src="../../assets/images/logo.gif" alt="">
-      <div class="logo">云集前端</div>
+      <img class="log-img" src="../assets/images/logo.gif" alt="">
+      <div class="logo">云集前端Demo</div>
     </div>
     <div class="main">
       <div class="sidebar">

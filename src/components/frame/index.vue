@@ -8,7 +8,7 @@
 
 <script>
   import EcHeader from './header';
-  import SideNav from './sideNav.vue';
+  import SideNav from './sideNav';
   import Container from './container';
 
   export default {
@@ -21,5 +21,5 @@
 </script>
 
 <style lang="less">
-  @import "../../assets/style/frame.less";
+  @import "../../assets/style/index.less";
 </style>

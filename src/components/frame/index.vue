@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <heads></heads>
+    <ecw-header></ecw-header>
     <side-nav></side-nav>
     <container></container>
   </div>
 </template>
 
 <script>
-  import Heads from './header';
-  import SideNav from './side-nav';
+  import ECWHeader from './header';
+  import SideNav from './sideNav';
   import Container from './container';
 
   export default {
     components: {
-      Heads, SideNav, Container,
+      SideNav,
+      Container,
+      'ecw-header': ECWHeader,
     },
   };
 </script>

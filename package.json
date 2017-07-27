@@ -1,9 +1,13 @@
 {
   "name": "ierp-front-common",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
+  "version": "1.0.15",
+  "description": "ierp front common project",
   "author": "SkyeTang <dengjc@ecworking.com>",
-  "private": true,
+  "main": "./src/index.js",
+  "style": "./src/index.css",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",

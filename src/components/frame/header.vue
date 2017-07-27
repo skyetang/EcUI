@@ -8,7 +8,7 @@
     </div>
     <div class="opt-wrap">
       <a href="javascript:;" class="admin-opt" v-if="isAdmin">
-        <span class="icon-manager__init"></span><span>管理员</span>
+        <span class="icon-manager__init icon-margin-right"></span><span>管理员</span>
       </a>
       <img class="avatar" :src="userLogo">
       <span class="line">{{userInfo.userName}}</span>

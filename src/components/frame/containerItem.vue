@@ -1,3 +1,15 @@
+<template>
+  <div class="container-item" :style="itemStyle">
+    <div class="item-head">
+      <slot name="head">
+      </slot>
+    </div>
+    <div class="item-body">
+      <slot></slot>
+    </div>
+  </div>
+</template>
+
 <script>
   export default{
     name: 'ec-container-item',
@@ -18,16 +30,5 @@
     },
   };
 </script>
-<template>
-  <div class="container-item" :style="itemStyle">
-    <div class="item-head">
-      <slot name="head">
-      </slot>
-    </div>
-    <div class="item-body">
-      <slot></slot>
-    </div>
-  </div>
-</template>
 <style lang="less">
 </style>

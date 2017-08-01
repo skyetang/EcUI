@@ -3,11 +3,13 @@
 import Vue from 'vue';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-default/index.css';
-import './assets/style/normalize.css';
+import './assets/style/index.less';
+import EcUI from './components/index';
 import App from './App';
 import router from './router';
 
 Vue.use(ElementUI);
+Vue.use(EcUI);
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

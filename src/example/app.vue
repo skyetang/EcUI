@@ -1,18 +1,18 @@
 <template>
-  <div>
-    <div class="header">
+  <div id="app">
+    <div class="demo-header">
       <img class="log-img" src="../assets/images/logo.gif" alt="">
       <div class="logo">云集前端Demo</div>
     </div>
-    <div class="main">
-      <div class="sidebar">
-        <el-menu>
-          <el-menu-item :index="'1'">参照</el-menu-item>
-          <el-menu-item :index="'2'">列表</el-menu-item>
-          <el-menu-item :index="'3'">可输可选</el-menu-item>
-        </el-menu>
-      </div>
-      <div class="content">
+    <div class="demo-sidebar">
+      <el-menu>
+        <el-menu-item :index="'1'">参照</el-menu-item>
+        <el-menu-item :index="'2'">列表</el-menu-item>
+        <el-menu-item :index="'3'">可输可选</el-menu-item>
+      </el-menu>
+    </div>
+    <div class="demo-content">
+      <div class="demo-wrapper">
         <router-view></router-view>
       </div>
     </div>
@@ -20,13 +20,11 @@
 </template>
 
 <script>
-  export default {
-
-  };
+  export default {};
 </script>
 
 <style lang="less">
-  .header {
+  .demo-header {
     position: fixed;
     display: flex;
     align-items: center;
@@ -39,22 +37,18 @@
 
     .logo {
       font-size: 22px;
-      display:flex;
-      flex-direction: row;
-      align-item:center;
+      display: flex;
+      fldemo-direction: row;
+      align-item: center;
 
     }
-    .log-img{
+    .log-img {
       width: 50px;
       height: 35px;
     }
   }
 
-  .main {
-    margin-top: 61px;
-  }
-
-  .sidebar {
+  .demo-sidebar {
     position: fixed;
     width: 260px;
     top: 61px;
@@ -62,8 +56,12 @@
     overflow-y: auto;
   }
 
-  .content {
-    margin-left: 260px;
-    padding: 20px;
+  .demo-content {
+    padding-left: 260px;
+    padding-top: 61px;
+
+    .demo-wrapper{
+      padding: 20px;
+    }
   }
 </style>

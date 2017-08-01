@@ -1,0 +1,54 @@
+@import './common/variable';
+
+.button {
+  padding: 10px 15px;
+  min-width: 92px;
+  white-space: nowrap;
+  text-align: center;
+  font-size: @font-size-base;
+  background-color: white;
+  border: 1px solid @border-color;
+  border-radius: @border-radius-base;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  user-select: none;
+
+  &:hover {
+    color: white;
+    background-color: @button-hover-background-color;
+    border-color: @button-hover-background-color;
+    transition: @all-transition;
+  }
+}
+
+.button-plain-default {
+  color: @sub-text-color;
+}
+
+.button-plain-danger {
+  color: @danger-color;
+}
+
+.button-default {
+  border-color: @sub-color;
+  background-color: @sub-color;
+  color: white;
+}
+
+.button + .button {
+  margin-left: 10px;
+}
+
+.is-disabled {
+  color: @button-disabled-color;
+  background-color: @button-disabled-background-color;
+  cursor: no-drop;
+  border-color: transparent;
+
+  &:hover{
+    color: @button-disabled-color;
+    background-color: @button-disabled-background-color;
+    border-color: transparent;
+  }
+}

@@ -10,5 +10,5 @@
     components: {
       FrameWork
     }
-  }
+  };
 </script>

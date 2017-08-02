@@ -31,7 +31,7 @@
         this.$router.push(item);
       }
     }
-  }
+  };
 </script>
 
 <style lang="less">

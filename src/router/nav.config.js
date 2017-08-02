@@ -7,4 +7,4 @@ export default [
     title: 'Button组件',
     component: Button
   }
-]
+];

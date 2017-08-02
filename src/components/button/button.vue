@@ -12,19 +12,18 @@
     props: {
       type: {
         type: String,
-        default: 'default',
+        default: 'default'
       },
       nativeType: {
         type: String,
-        default: 'button',
+        default: 'button'
       },
-      disabled: Boolean,
+      disabled: Boolean
     },
-
     methods: {
       handleClick(evt) {
         this.$emit('click', evt);
-      },
-    },
+      }
+    }
   };
 </script>

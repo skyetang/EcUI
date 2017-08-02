@@ -25,8 +25,8 @@
       EcHeader,
       SideNav,
       Container,
-      ContainerItem,
-    },
+      ContainerItem
+    }
   };
 </script>
 

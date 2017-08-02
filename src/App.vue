@@ -8,10 +8,7 @@
 
   export default {
     components: {
-      FrameWork,
-    },
-  };
+      FrameWork
+    }
+  }
 </script>
-
-<style lang="less">
-</style>

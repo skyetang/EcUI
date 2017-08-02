@@ -29,12 +29,16 @@ module.exports = {
       'js': 'never',
       'vue': 'never'
     }],
-    "no-console": "off",
     // allow optionalDependencies
     'import/no-extraneous-dependencies': ['error', {
       'optionalDependencies': ['test/unit/index.js']
     }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    // 关闭语句末强制分号
+    //"semi": [0],
+    // 关闭不能使用console.log打印
+    "no-console": "off",
+    "comma-dangle": [2, "never"],
   }
 }

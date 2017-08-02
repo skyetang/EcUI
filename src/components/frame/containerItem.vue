@@ -16,8 +16,8 @@
     props: {
       width: {
         type: String,
-        default: '',
-      },
+        default: ''
+      }
     },
     computed: {
       itemStyle() {
@@ -26,7 +26,7 @@
           s = { width: this.width };
         }
         return s;
-      },
-    },
+      }
+    }
   };
 </script>

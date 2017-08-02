@@ -23,15 +23,15 @@
   export default {
     data() {
       return {
-        navConfig,
+        navConfig
       };
     },
     methods: {
       directUrl(item) {
         this.$router.push(item);
-      },
-    },
-  };
+      }
+    }
+  }
 </script>
 
 <style lang="less">

@@ -15,7 +15,7 @@ const components = {
   EcSideNav,
   EcContainerItem,
   EcButton,
-  EcCrystalButton,
+  EcCrystalButton
 };
 
 const install = (Vue) => {
@@ -25,5 +25,5 @@ const install = (Vue) => {
 };
 
 export default {
-  install,
+  install
 };

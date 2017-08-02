@@ -18,6 +18,6 @@
 
 <script>
   export default {
-    name: 'ec-side-nav',
+    name: 'ec-side-nav'
   };
 </script>

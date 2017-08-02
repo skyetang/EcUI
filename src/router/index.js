@@ -1,16 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Button from '@/example/button';
+import navConfig from './nav.config';
 
 Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  routes: [
-    {
-      path: '/button',
-      name: 'button',
-      component: Button,
-    },
-  ],
+  routes: navConfig,
 });

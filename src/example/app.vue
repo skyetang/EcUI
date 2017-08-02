@@ -6,9 +6,9 @@
     </div>
     <div class="demo-sidebar">
       <el-menu>
-        <el-menu-item :index="'1'">参照</el-menu-item>
-        <el-menu-item :index="'2'">列表</el-menu-item>
-        <el-menu-item :index="'3'">可输可选</el-menu-item>
+        <el-menu-item v-for="(item,index) in navConfig" :key="index" :index="`'${index}'`">
+          <router-link :to="item">{{item.title}}</router-link>
+        </el-menu-item>
       </el-menu>
     </div>
     <div class="demo-content">
@@ -20,7 +20,20 @@
 </template>
 
 <script>
-  export default {};
+  import navConfig from '../router/nav.config';
+
+  export default {
+    data() {
+      return {
+        navConfig,
+      };
+    },
+    methods: {
+      directUrl(item) {
+        this.$router.push(item);
+      },
+    },
+  };
 </script>
 
 <style lang="less">
@@ -60,7 +73,7 @@
     padding-left: 260px;
     padding-top: 61px;
 
-    .demo-wrapper{
+    .demo-wrapper {
       padding: 20px;
     }
   }

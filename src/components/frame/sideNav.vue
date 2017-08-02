@@ -21,7 +21,3 @@
     name: 'ec-side-nav',
   };
 </script>
-
-<style lang="less">
-
-</style>

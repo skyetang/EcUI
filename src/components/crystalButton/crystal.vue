@@ -1,14 +1,13 @@
 <template>
-  <button :disabled="disabled"
-          @click="handleClick"
+  <button @click="handleClick"
           :type="nativeType"
-          :class="['button',type ? 'button-' + type : '',{'is-disabled': disabled}]">
+          :class="['crystal-button',type ? 'crystal-button-' + type : '']">
     <slot></slot>
   </button>
 </template>
 <script>
   export default {
-    name: 'EcButton',
+    name: 'EcCrystalButton',
     props: {
       type: {
         type: String,
@@ -18,9 +17,7 @@
         type: String,
         default: 'button',
       },
-      disabled: Boolean,
     },
-
     methods: {
       handleClick(evt) {
         this.$emit('click', evt);

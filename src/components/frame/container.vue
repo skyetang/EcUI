@@ -11,5 +11,3 @@
     name: 'ec-container',
   };
 </script>
-<style lang="less">
-</style>

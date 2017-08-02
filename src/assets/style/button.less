@@ -1,5 +1,9 @@
 @import './common/variable';
 
+/*
+ * Button 样式
+ *
+ */
 .button {
   padding: 10px 15px;
   min-width: 92px;
@@ -52,5 +56,58 @@
     color: @button-disabled-text-color;
     background-color: @button-disabled-background-color;
     border-color: transparent;
+  }
+}
+
+
+
+/*
+ * CrystalButton 水晶按钮样式
+ *
+ */
+.crystal-button{
+  padding: 2px 5px;
+  border-radius: 12px;
+  min-width: 60px;
+  font-size: @font-size-sub;
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.crystal-button-default {
+  border: 1px solid #E1E6E9;
+  background-color: white;
+  color: #37474F !important;
+
+  &:hover {
+    border-color: #E8ECEE;
+    background-color: #E8ECEE;
+    color: #37474F !important;
+  }
+}
+
+.crystal-button-danger {
+  border: 1px solid #FF9494;
+  background-color: #FFF9F8;
+  color: @button-danger-hover-color !important;
+
+  &:hover {
+    border-color: #FF9494;
+    background-color: #FF9494;
+    color: white !important;
+  }
+}
+
+.crystal-button-primary {
+  border: 1px solid #94DEFF;
+  background-color: white;
+  color: #03a9f4 !important;
+
+  &:hover {
+    border-color: #94DEFF;
+    background-color: #94DEFF;
+    color: white !important;
   }
 }

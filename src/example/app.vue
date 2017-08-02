@@ -4,13 +4,11 @@
       <img class="log-img" src="../assets/images/logo.gif" alt="">
       <div class="logo">云集前端Demo</div>
     </div>
-    <div class="demo-sidebar">
-      <el-menu>
-        <el-menu-item v-for="(item,index) in navConfig" :key="index" :index="`'${index}'`">
-          <router-link :to="item">{{item.title}}</router-link>
-        </el-menu-item>
-      </el-menu>
-    </div>
+    <ul class="demo-sidebar">
+      <li class="sidebar-item" v-for="(item,index) in navConfig" :key="index">
+        <router-link :to="item">{{item.title}}</router-link>
+      </li>
+    </ul>
     <div class="demo-content">
       <div class="demo-wrapper">
         <router-view></router-view>
@@ -67,6 +65,24 @@
     top: 61px;
     left: 0;
     overflow-y: auto;
+
+    .sidebar-item{
+
+      a{
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 13px;
+        padding-left: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &.router-link-active{
+          color: #20a0ff;
+        }
+      }
+    }
   }
 
   .demo-content {

@@ -16,8 +16,8 @@
 
   &:hover {
     color: white;
-    background-color: @button-hover-background-color;
-    border-color: @button-hover-background-color;
+    background-color: @button-hover-color;
+    border-color: @button-hover-color;
     transition: @all-transition;
   }
 }
@@ -27,12 +27,15 @@
   color: white;
 }
 
-.button-plain-default {
-  color: @sub-text-color;
-}
+.button-danger {
+  border-color: @button-danger-color;
+  background-color:  @button-danger-color;
+  color: white;
 
-.button-plain-danger {
-  color: @danger-color;
+  &:hover{
+    border-color: @button-danger-hover-color;
+    background-color:  @button-danger-hover-color;
+  }
 }
 
 .button + .button {
@@ -40,13 +43,13 @@
 }
 
 .is-disabled {
-  color: @button-disabled-color;
+  color: @button-disabled-text-color;
   background-color: @button-disabled-background-color;
   cursor: no-drop;
   border-color: transparent;
 
   &:hover{
-    color: @button-disabled-color;
+    color: @button-disabled-text-color;
     background-color: @button-disabled-background-color;
     border-color: transparent;
   }

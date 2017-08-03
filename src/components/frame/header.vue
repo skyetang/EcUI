@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import axios from 'axios';
+//  import axios from 'axios';
   import userLogo from '../../assets/images/userLogo.png';
   import adminLogo from '../../assets/images/adminLogo.png';
   import entLogo from '../../assets/images/entLogo.png';
@@ -48,7 +48,7 @@
     },
     methods: {
       getUserInfo() {
-        axios.post('/ierp/hr-pc/v1/pc/hr/get/user')
+        this.$http.post('/ierp/hr-pc/v1/pc/hr/get/user')
           .then(
             (res) => {
               if (res.data.success) {
@@ -61,7 +61,7 @@
             });
       },
       getEntList() {
-        axios.post('/ierp/hr-pc/v2/user/ents')
+        this.$http.post('/ierp/hr-pc/v2/user/ents')
           .then(
             (res) => {
               if (res.data.success) {

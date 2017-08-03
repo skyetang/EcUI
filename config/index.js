@@ -33,7 +33,7 @@ module.exports = {
         logLevel: 'debug',
         changeOrigin: true,
         headers: {
-          cookie: process.env.COOKIEMANU || 'SESSION=f0d97b85-6f5d-42bc-80e2-05af21c8afab',
+          cookie: process.env.COOKIEMANU || 'SESSION=bcd9417a-4f88-4621-bf4d-916bbb69cd4d',
           pcServer:'192.168.6.12'
           //pcServer:'192.168.1.183'
         }

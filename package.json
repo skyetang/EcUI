@@ -1,6 +1,6 @@
 {
   "name": "ierp-front-common",
-  "version": "1.0.23",
+  "version": "1.0.25",
   "description": "ierp front common project",
   "author": "SkyeTang <dengjc@ecworking.com>",
   "main": "./src/components/index.js",
@@ -20,7 +20,9 @@
   "dependencies": {
     "axios": "^0.16.2",
     "element-ui": "^1.4.0",
+    "qs": "^6.5.0",
     "vue": "^2.3.3",
+    "vue-axios": "^2.0.2",
     "vue-router": "^2.6.0"
   },
   "devDependencies": {

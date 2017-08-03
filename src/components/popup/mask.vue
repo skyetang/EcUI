@@ -35,7 +35,7 @@
     },
     methods: {
       doOnClick(){
-        if ( this.onClick ) this.onClick()
+        if (this.onClick) this.onClick();
       }
     }
   };

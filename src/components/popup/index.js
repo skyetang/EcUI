@@ -26,28 +26,28 @@ export default {
     this.setIndex();
   },
   mounted(){
-    if ( this.show ) {
-      Manager.show( this );
+    if (this.show) {
+      Manager.show(this);
     }
   },
   methods: {
-    setIndex(){
-      const dom = this.$el
-      if ( dom ) dom.style.zIndex = this.zIndex;
+    setIndex() {
+      const dom = this.$el;
+      if (dom) dom.style.zIndex = this.zIndex;
     },
-    resetIndex(){
-      this.maskIndex = getIndex()
+    resetIndex() {
+      this.maskIndex = getIndex();
       this.zIndex = getIndex();
     }
   },
   watch: {
-    show( val, oldval ){
-      if ( val === oldval ) return
-      if ( val ) {
-        this.resetIndex()
-        Manager.show( this );
+    show(val, oldval) {
+      if (val === oldval) return;
+      if (val) {
+        this.resetIndex();
+        Manager.show(this);
       } else {
-        Manager.close( this );
+        Manager.close(this);
       }
     }
   }

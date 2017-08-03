@@ -66,9 +66,9 @@
     left: 0;
     overflow-y: auto;
 
-    .sidebar-item{
+    .sidebar-item {
 
-      a{
+      a {
         display: block;
         height: 40px;
         line-height: 40px;
@@ -78,7 +78,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
 
-        &.router-link-active{
+        &.router-link-active {
           color: #20a0ff;
         }
       }

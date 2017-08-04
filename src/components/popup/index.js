@@ -16,16 +16,16 @@ export default {
       default: 0.4
     }
   },
-  data(){
+  data() {
     return {
       maskIndex: getIndex(),
       zIndex: getIndex()
     };
   },
-  updated(){
+  updated() {
     this.setIndex();
   },
-  mounted(){
+  mounted() {
     if (this.show) {
       Manager.show(this);
     }
@@ -47,7 +47,7 @@ export default {
         this.resetIndex();
         Manager.show(this);
       } else {
-        Manager.close(this);
+        Manager.hide(this);
       }
     }
   }

@@ -8,6 +8,7 @@ import EcSideNav from './frame/sideNav';
 import EcContainerItem from './frame/containerItem';
 import EcButton from './button';
 import EcCrystalButton from './crystalButton';
+import EcDialog from './dialog';
 
 const components = {
   EcHeader,
@@ -15,7 +16,8 @@ const components = {
   EcSideNav,
   EcContainerItem,
   EcButton,
-  EcCrystalButton
+  EcCrystalButton,
+  EcDialog
 };
 
 const install = (Vue) => {

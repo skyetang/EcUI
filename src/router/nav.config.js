@@ -7,12 +7,12 @@ export default [
   {
     path: '/button',
     name: 'button',
-    title: 'Button 按钮',
+    title: 'button 按钮',
     component: Button
   }, {
     path: '/dialog',
     name: 'dialog',
-    title: 'Dialog 弹出框',
+    title: 'dialog 弹出框',
     component: Dialog
   }, {
     path: '/tab',

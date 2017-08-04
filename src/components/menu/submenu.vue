@@ -4,7 +4,7 @@
          :class="{'is-active':active, 'is-line-active':lineActive}"
          :style="paddingStyle"
          @click.stop="handleClick">
-      <i class="icon-margin-right icon-arrow__down" :class="{'icon-transparent':!haveChildren}"></i>
+      <i  :class="['icon-margin-right','icon-arrow__right',{'opened':opened},{'icon-transparent':!haveChildren}]"></i>
       <slot name="title"></slot>
     </div>
     <ul class="menu" v-show="opened">

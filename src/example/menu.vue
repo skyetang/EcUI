@@ -1,6 +1,6 @@
 <template>
     <div style="width: 300px">
-      <ec-menu default-active="2-1-1">
+      <ec-menu default-active="2" :default-opened="['1']">
         <ec-menu-item index="'0'">没有父级</ec-menu-item>
         <ec-submenu index="1">
           <template slot="title">1</template>

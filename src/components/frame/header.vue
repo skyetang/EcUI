@@ -18,7 +18,6 @@
 </template>
 
 <script>
-//  import axios from 'axios';
   import userLogo from '../../assets/images/userLogo.png';
   import adminLogo from '../../assets/images/adminLogo.png';
   import entLogo from '../../assets/images/entLogo.png';
@@ -55,8 +54,8 @@
                 this.userInfo = res.data.data;
                 sessionStorage.setItem('UserInfo', JSON.stringify(res.data.data));
                 /* 如果返回的数据中有logo，则替换。无则使用默认logo */
-                this.entLogo = this.userInfo.entLogo == null ? entLogo : this.userInfo.entLogo;
-                this.userLogo = this.userInfo.userLogo == null ? userLogo : this.userInfo.userLogo;
+                this.entLogo = this.userInfo.entLogo === null ? entLogo : this.userInfo.entLogo;
+                this.userLogo = this.userInfo.userLogo === null ? userLogo : this.userInfo.userLogo;
               }
             });
       },

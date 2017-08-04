@@ -29,3 +29,6 @@ const install = (Vue) => {
 export default {
   install
 };
+
+export { default as VueQueryStringPlugin } from './VueQueryStringPlugin';
+export { default as VueAxiosPlugin } from './VueAxiosPlugin';

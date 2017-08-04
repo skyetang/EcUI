@@ -1,6 +1,6 @@
 <template>
-  <transition name="mask">
-    <div class="mask" @click="doOnClick" :style="styles"></div>
+  <transition name="mask-fade">
+    <div class="mask" v-if="show" @click="doOnClick" :style="styles"></div>
   </transition>
 </template>
 
@@ -8,11 +8,15 @@
   export default {
     name: 'mask',
     props: {
+      show: {
+        type: Boolean,
+        default: false
+      },
       bgColor: {
         type: String,
         default: '#000'
       },
-      opacity: {
+      mOpacity: {
         type: Number,
         default: 0.4
       },
@@ -25,16 +29,16 @@
       }
     },
     computed: {
-      styles(){
+      styles() {
         return {
           'background-color': this.bgColor,
-          'opacity': this.opacity,
-          'z-index': this.zIndex
+          'z-index': this.zIndex,
+          opacity: this.mOpacity
         };
       }
     },
     methods: {
-      doOnClick(){
+      doOnClick() {
         if (this.onClick) this.onClick();
       }
     }
@@ -51,5 +55,13 @@
     background-color: #000;
     opacity: .4;
     z-index: 1000;
+  }
+
+  .mask-fade-enter-active {
+    transition: opacity .45s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .mask-fade-enter {
+    opacity: 0 !important;
   }
 </style>

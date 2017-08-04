@@ -1,11 +1,13 @@
-let zIndex = 9999999;
+let zIndex = 999;
 
-export const getIndex = () => zIndex++;
-
+export const getIndex = () => {
+  zIndex += 1;
+  return zIndex;
+};
 export const getDom = (dom) => {
   if (dom.nodeType === 3) {
-    dom = dom.nextElementSibling || dom.nextSibling;
-    getDom(dom);
+    const newDom = dom.nextElementSibling || dom.nextSibling;
+    getDom(newDom);
   }
   return dom;
-}
+};

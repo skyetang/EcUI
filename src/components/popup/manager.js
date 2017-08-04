@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import MaskLayout from './mask';
+
 const Mask = Vue.extend(MaskLayout);
 
 const manager = {
@@ -48,8 +49,9 @@ const manager = {
       el: document.createElement('div')
     });
     this.mask.bgColor = instance.maskBgColor;
-    this.mask.opacity = instance.maskOpacity;
+    this.mask.mOpacity = instance.maskOpacity;
     this.mask.zIndex = instance.maskIndex;
+    this.mask.show = true;
     document.body.append(this.mask.$el);
   },
   /**
@@ -59,9 +61,12 @@ const manager = {
    */
   hideMask() {
     if (!this.mask) return;
-    this.mask.$el.remove();
-    this.mask.$destroy();
-    this.mask = false;
+    this.mask.show = false;
+    setTimeout(() => {
+      this.mask.$el.remove();
+      this.mask.$destroy();
+      this.mask = false;
+    }, 450);
   },
   /**
    * =======================
@@ -70,9 +75,9 @@ const manager = {
    */
   changeMaskIndex() {
     if (!this.mask || this.instances.length === 0) return;
-    const instance = this.instances[ this.instances.length - 1 ];
+    const instance = this.instances[this.instances.length - 1];
     this.mask.bgColor = instance.maskBgColor;
-    this.mask.opacity = instance.maskOpacity;
+    this.mask.mOpacity = instance.maskOpacity;
     this.mask.zIndex = instance.maskIndex;
   }
 };

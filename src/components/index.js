@@ -9,6 +9,8 @@ import EcContainerItem from './frame/containerItem';
 import EcButton from './button';
 import EcCrystalButton from './crystalButton';
 import EcDialog from './dialog';
+import { EcTab, EcTabs } from './tab';
+import { EcMenu, EcSubmenu, EcMenuItem } from './menu';
 
 const components = {
   EcHeader,
@@ -17,7 +19,12 @@ const components = {
   EcContainerItem,
   EcButton,
   EcCrystalButton,
-  EcDialog
+  EcDialog,
+  EcTab,
+  EcTabs,
+  EcMenu,
+  EcSubmenu,
+  EcMenuItem
 };
 
 const install = (Vue) => {

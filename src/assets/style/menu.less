@@ -1,0 +1,40 @@
+@import './common/variable';
+/*
+ * menu 样式
+ *
+ */
+
+.menu{
+  padding: 0;
+  margin: 0;
+
+  .icon-margin-right{
+    margin-right: 6px;
+  }
+
+  .icon-transparent{
+    opacity: 0;
+  }
+
+  .sub-title{
+    display: flex;
+    align-items: center;
+    padding: 16px 0px 16px 15px;
+    border-bottom: 1px solid @border-color;
+    border-left:3px solid transparent;
+    cursor: pointer;
+
+    &.active,&:hover{
+      background-color: @menu-hover-background-color;
+      color:@menu-hover-text;
+    }
+    &.is-active{
+      color:@menu-hover-text;
+      border-left:3px solid @menu-hover-background-color;
+    }
+  }
+
+  .menu-item{
+    .sub-title;
+  }
+}

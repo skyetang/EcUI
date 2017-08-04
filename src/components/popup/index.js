@@ -38,6 +38,9 @@ export default {
     resetIndex() {
       this.maskIndex = getIndex();
       this.zIndex = getIndex();
+    },
+    doClose() {
+      this.$emit('update:show', false);
     }
   },
   watch: {

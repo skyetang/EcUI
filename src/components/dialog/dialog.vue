@@ -8,8 +8,8 @@
       <slot></slot>
       <div class="dialog-footer">
         <slot name="footer">
-          <ec-button type="danger" @click="quite">取消</ec-button>
-          <ec-button @click="sure">确定</ec-button>
+          <ec-button type="danger" @click="cancel">取消</ec-button>
+          <ec-button @click="confirm">确定</ec-button>
         </slot>
       </div>
     </div>
@@ -34,14 +34,15 @@
     },
     methods: {
       close() {
+        this.doClose();
         this.$emit('close');
       },
-      quite() {
-        this.$emit('close');
+      cancel() {
+        this.doClose();
+        this.$emit('cancel');
       },
-      sure() {
-        this.$emit('close');
-        this.$emit('sure');
+      confirm() {
+        this.$emit('confirm');
       }
     }
   };

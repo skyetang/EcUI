@@ -3,6 +3,11 @@
  */
 export default {
   computed: {
+    /**
+    * =========
+    * 获取从子级到父级一条线的index数组
+    * =========
+    * */
     indexPath() {
       const path = [this.index];
       let parent = this.$parent;
@@ -14,6 +19,11 @@ export default {
       }
       return path;
     },
+    /**
+     * =========
+     * 获取根菜单组件
+     * =========
+     * */
     rootMenu() {
       let parent = this.$parent;
       while (parent && parent.$options.name !== 'EcMenu') {
@@ -21,6 +31,11 @@ export default {
       }
       return parent;
     },
+    /**
+     * =========
+     * 获取父级菜单组件
+     * =========
+     * */
     parentMenu() {
       let parent = this.$parent;
       while (parent && ['EcMenu', 'EcSubmenu'].indexOf(parent.$options.name) === -1) {
@@ -28,6 +43,11 @@ export default {
       }
       return parent;
     },
+    /**
+     * =========
+     * 根据层级计算左内边距
+     * =========
+     * */
     paddingStyle() {
       let padding = 20;
       let parent = this.$parent;

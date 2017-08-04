@@ -33,9 +33,6 @@ const install = (Vue) => {
   });
 };
 
-export default {
-  install
-};
-
-export { default as VueQueryStringPlugin } from './VueQueryStringPlugin';
-export { default as VueAxiosPlugin } from './VueAxiosPlugin';
+export const EcUI = { install };
+export { default as VueQueryString } from '../utils/VueQueryString';
+export { default as VueAxios } from '../utils/VueAxios';

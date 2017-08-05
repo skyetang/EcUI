@@ -40,5 +40,9 @@ module.exports = {
     // 关闭不能使用console.log打印
     "no-console": "off",
     "comma-dangle": [2, "never"],
+  },
+  // 启用全局变量
+  "globals": {
+    "API": true,
   }
 }

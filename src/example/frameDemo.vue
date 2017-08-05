@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <ec-header></ec-header>
-    <ec-side></ec-side>
+    <ec-header>
+    </ec-header>
+    <ec-side>
+      <ec-side-erp></ec-side-erp>
+    </ec-side>
     <ec-container>
       <ec-container-item width="400px">
         <template slot="head">112</template>

@@ -1,7 +1,6 @@
 /**
  * Created by lucas on 2017/7/27.
  */
-
 import EcHeader from './frame/header';
 import EcContainer from './frame/container';
 import EcSideNav from './frame/sideNav';

@@ -1,7 +1,7 @@
 <template>
   <ul class="menu-list">
     <li v-for="item in value">
-      <template v-if="item.items.length >0">
+      <template v-if="item.items.length >0 || item.url == ''">
         <a href="javascript:;" class="gray">
           <span class="icon icon-left" :class="[item.style != '' && item.style != null ? item.style : '']"></span>
           <span>{{item.name}}</span>
@@ -13,10 +13,10 @@
           <span>{{item.name}}</span>
         </router-link>
       </template>
-      <ul v-if="item.items.length>0">
-        <li v-for="item in item.items">
-          <router-link :to="{ path: item.url }">
-            <span>{{item.name}}</span>
+      <ul v-if="item.items.length >0 ">
+        <li v-for="secItem in item.items">
+          <router-link :to="{ path: secItem.url }">
+            <span>{{secItem.name}}</span>
           </router-link>
         </li>
       </ul>

@@ -4,19 +4,18 @@
 import EcHeader from './frame/header';
 import EcContainer from './frame/container';
 import EcSideBar from './frame/sideBar';
-import EcSideMenu from './sideMenu';
 import EcContainerItem from './frame/containerItem';
 import EcButton from './button';
 import EcCrystalButton from './crystalButton';
 import EcDialog from './dialog';
 import { EcTab, EcTabs } from './tab';
 import { EcMenu, EcSubmenu, EcMenuItem } from './menu';
+import EcSideMenu from './sideMenu';
 
 const components = {
   EcHeader,
   EcContainer,
   EcSideBar,
-  EcSideMenu
   EcContainerItem,
   EcButton,
   EcCrystalButton,
@@ -26,6 +25,7 @@ const components = {
   EcMenu,
   EcSubmenu,
   EcMenuItem,
+  EcSideMenu
 };
 
 const install = (Vue) => {

@@ -1,8 +1,7 @@
 <template>
   <div class="container-item" :style="itemStyle">
     <div class="item-head">
-      <slot name="head">
-      </slot>
+      <slot name="head"></slot>
     </div>
     <div class="item-body">
       <slot></slot>

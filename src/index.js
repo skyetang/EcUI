@@ -17,5 +17,4 @@ const install = (Vue) => {
 };
 
 export default { install };
-export const EcworkingUI = { install };
 export { default as EcRouter } from './router/nav.config';

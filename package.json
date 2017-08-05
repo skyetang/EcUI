@@ -4,7 +4,7 @@
   "description": "ierp front common project",
   "author": "SkyeTang <dengjc@ecworking.com>",
   "main": "./src/index.js",
-  "style": "./src/asset/index.less",
+  "style": ["./src/asset/index.less","./src/assets/style/common/variable.less"],
   "files": [
     "src"
   ],

@@ -1,6 +1,6 @@
 {
   "name": "ierp-front-common",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "ierp front common project",
   "author": "SkyeTang <dengjc@ecworking.com>",
   "main": "./src/index.js",

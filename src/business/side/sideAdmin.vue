@@ -1,11 +1,17 @@
 <template>
-  <div class="header">
+  <div>
 
   </div>
 </template>
 
 <script>
   export default {
-    name: 'EcHeader'
+    name: 'EcSideAdmin'
   };
 </script>
+
+<style lang="less">
+
+</style>
+
+

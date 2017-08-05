@@ -8,6 +8,6 @@
 
 <script>
   export default{
-    name: 'ec-container'
+    name: 'EcContainer'
   };
 </script>

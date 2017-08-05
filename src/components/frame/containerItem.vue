@@ -12,7 +12,7 @@
 
 <script>
   export default{
-    name: 'ec-container-item',
+    name: 'EcContainerItem',
     props: {
       width: {
         type: String,

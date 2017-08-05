@@ -26,11 +26,11 @@
 
 <script>
   export default {
-    name:'EcSideMenu',
+    name: 'EcSideMenu',
     props: {
       value: {
         type: Array,
-        require: true,
+        require: true
       }
     }
   };

@@ -24,6 +24,18 @@
     border-color: @button-hover-color;
     transition: @all-transition;
   }
+  &.is-disabled {
+    color: @button-disabled-text-color;
+    background-color: @button-disabled-background-color;
+    cursor: no-drop;
+    border-color: transparent;
+
+    &:hover{
+      color: @button-disabled-text-color;
+      background-color: @button-disabled-background-color;
+      border-color: transparent;
+    }
+  }
 }
 .button-default {
   border-color: @sub-color;
@@ -46,18 +58,7 @@
   margin-left: 10px;
 }
 
-.is-disabled {
-  color: @button-disabled-text-color;
-  background-color: @button-disabled-background-color;
-  cursor: no-drop;
-  border-color: transparent;
 
-  &:hover{
-    color: @button-disabled-text-color;
-    background-color: @button-disabled-background-color;
-    border-color: transparent;
-  }
-}
 
 
 
@@ -121,6 +122,7 @@
 }
 .text-button{
   color:@text-color;
+  line-height: 24px;
 
   &:hover{
     color: @link-hover-color;

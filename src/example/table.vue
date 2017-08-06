@@ -47,6 +47,34 @@
           min-width="50">
         </el-table-column>
       </el-table>
+      <br>
+      <el-table
+        :data="tableData"
+        border
+        class="ec-table-page">
+        <el-table-column
+          prop="date"
+          label="日期"
+          min-width="10">
+        </el-table-column>
+        <el-table-column
+          prop="name"
+          label="姓名"
+          min-width="30">
+          <template scope="scope">
+            <div class="table-item-wrap">
+              <p>201707070001</p>
+              <p>{{ scope.row.address }}</p>
+              <p>自制件</p>
+            </div>
+          </template>
+        </el-table-column>
+        <el-table-column
+          prop="address"
+          label="地址"
+          min-width="50">
+        </el-table-column>
+      </el-table>
     </div>
 </template>
 

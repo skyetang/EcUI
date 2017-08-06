@@ -3,6 +3,7 @@ import Dialog from '../example/dialog';
 import Tab from '../example/tab';
 import Menu from '../example/menu';
 import Table from '../example/table';
+import Page from '../example/page';
 
 export default [
   {
@@ -30,5 +31,10 @@ export default [
     name: 'table',
     title: 'table 表格',
     component: Table
+  }, {
+    path: '/page',
+    name: 'page',
+    title: 'page 详情页',
+    component: Page
   }
 ];

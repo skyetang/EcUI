@@ -12,6 +12,8 @@ import EcDialog from './dialog';
 import { EcTab, EcTabs } from './tab';
 import { EcMenu, EcSubmenu, EcMenuItem } from './menu';
 import EcSideMenu from './sideMenu';
+import EcPage from './page';
+
 
 const components = {
   EcHeader,
@@ -27,7 +29,8 @@ const components = {
   EcMenu,
   EcSubmenu,
   EcMenuItem,
-  EcSideMenu
+  EcSideMenu,
+  EcPage
 };
 
 const install = (Vue) => {

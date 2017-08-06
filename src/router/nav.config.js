@@ -2,6 +2,7 @@ import Button from '../example/button';
 import Dialog from '../example/dialog';
 import Tab from '../example/tab';
 import Menu from '../example/menu';
+import Table from '../example/table';
 
 export default [
   {
@@ -24,5 +25,10 @@ export default [
     name: 'menu',
     title: 'menu 菜单',
     component: Menu
+  }, {
+    path: '/table',
+    name: 'table',
+    title: 'table 表格',
+    component: Table
   }
 ];

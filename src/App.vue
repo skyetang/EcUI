@@ -88,9 +88,12 @@
     .demo-content {
       padding-left: 260px;
       padding-top: 61px;
+      height: 100%;
 
       .demo-wrapper {
         padding: 20px;
+        height: 100%;
+        overflow: auto;
       }
     }
   </style>

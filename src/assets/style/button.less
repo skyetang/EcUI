@@ -111,3 +111,22 @@
     color: white !important;
   }
 }
+
+/*
+ * 文字按钮样式
+ *
+ */
+.text-button + .text-button {
+  margin-left: 10px;
+}
+.text-button{
+  color:@text-color;
+
+  &:hover{
+    color: @link-hover-color;
+  }
+}
+
+.text-button-href{
+  color: @link-hover-color;
+}

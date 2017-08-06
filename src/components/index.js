@@ -13,6 +13,7 @@ import { EcTab, EcTabs } from './tab';
 import { EcMenu, EcSubmenu, EcMenuItem } from './menu';
 import EcSideMenu from './sideMenu';
 import EcPage from './page';
+import Message from './message';
 
 
 const components = {
@@ -37,6 +38,7 @@ const install = (Vue) => {
   Object.keys(components).forEach((key) => {
     Vue.component(components[key].name, components[key]);
   });
+  Vue.prototype.$message = Message;
 };
 
 export default { install };

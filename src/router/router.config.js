@@ -1,5 +1,6 @@
 import Button from '../example/button';
 import Dialog from '../example/dialog';
+import Message from '../example/message';
 import Tab from '../example/tab';
 import Menu from '../example/menu';
 import Table from '../example/table';
@@ -16,6 +17,11 @@ export default [
     name: 'dialog',
     title: 'dialog 弹出框',
     component: Dialog
+  }, {
+    path: '/message',
+    name: 'message',
+    title: 'message 确认弹框',
+    component: Message
   }, {
     path: '/tab',
     name: 'tab',

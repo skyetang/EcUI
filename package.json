@@ -1,13 +1,11 @@
 {
   "name": "front-common",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "description": "ierp front common project",
   "author": "SkyeTang <dengjc@ecworking.com>",
   "main": "./src/index.js",
   "style": ["./src/asset/index.less","./src/assets/style/common/variable.less"],
-  "files": [
-    "src"
-  ],
+  "files": ["src"],
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
@@ -92,6 +90,11 @@
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.1.233/front/front-common.git"
+  },
+  "license": "MIT",
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"

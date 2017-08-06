@@ -23,7 +23,10 @@
         type: String,
         default: 'button'
       },
-      disabled: Boolean
+      disabled: {
+        type: Boolean,
+        default: false
+      }
     },
     methods: {
       handleClick(evt) {

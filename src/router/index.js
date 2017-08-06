@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import navConfig from './nav.config';
+import navConfig from './router.config';
 
 Vue.use(Router);
 

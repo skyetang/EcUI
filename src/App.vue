@@ -5,7 +5,7 @@
         <div class="logo">云集前端Demo</div>
       </div>
       <ul class="demo-sidebar">
-        <li class="sidebar-item" v-for="(item,index) in navConfig" :key="index">
+        <li class="sidebar-item" v-for="(item,index) in RouterConfig" :key="index">
           <router-link :to="item">{{item.title}}</router-link>
         </li>
       </ul>
@@ -18,12 +18,12 @@
   </template>
 
   <script>
-    import navConfig from './router/nav.config';
+    import RouterConfig from './router/router.config';
 
     export default {
       data() {
         return {
-          navConfig
+          RouterConfig
         };
       },
       methods: {

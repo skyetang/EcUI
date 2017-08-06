@@ -28,7 +28,7 @@
   export default {
     methods: {
       c() {
-        alert(123);
+        console.log(13);
       }
     }
   };

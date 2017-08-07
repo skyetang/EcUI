@@ -77,7 +77,7 @@
       },
       close() {
         this.show = false;
-        if (this.action) {
+        if (this.action && this.callback) {
           this.callback(this.action, this);
         }
       }

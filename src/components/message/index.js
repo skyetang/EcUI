@@ -8,7 +8,6 @@ let instance;
 
 const defaultCallback = (action) => {
   if (currentMsg) {
-    console.log('c', currentMsg);
     const cb = currentMsg.callback;
     if (typeof cb === 'function') {
       cb(action);
@@ -16,7 +15,7 @@ const defaultCallback = (action) => {
     if (currentMsg.resolve) {
       if (action === 'confirm') {
         currentMsg.resolve(action);
-      } else if (action === 'cancle' && currentMsg.reject) {
+      } else if (action === 'cancel' && currentMsg.reject) {
         currentMsg.reject(action);
       }
     }
@@ -35,15 +34,12 @@ const showMessage = () => {
     InitInstance();
   }
   instance.action = '';
-  console.log('i', instance);
-  console.log('m', MsgQuen);
   if (!instance.show) {
     if (MsgQuen.length > 0) {
       currentMsg = MsgQuen.shift();
       const options = currentMsg.options;
-      console.log('0', options);
       Object.keys(options).forEach((key) => {
-        if (Object.prototype.hasOwnProperty.call(options, key)) {
+        if (Object.prototype.hasOwnProperty.call(instance, key)) {
           instance[key] = options[key];
         }
       });
@@ -58,8 +54,7 @@ const showMessage = () => {
   }
 };
 
-function Message(options, callback, ...args) {
-  console.log(args);
+const Message = (options, callback, ...args) => {
   if (typeof options === 'string') {
     options = {
       message: options
@@ -73,10 +68,8 @@ function Message(options, callback, ...args) {
   } else if (options.callback && !callback) {
     callback = options.callback;
   }
-  console.log(options);
   if (typeof Promise !== 'undefined') {
     return new Promise((resolve, reject) => {
-      console.log('r', resolve);
       MsgQuen.push({
         options,
         callback,
@@ -84,8 +77,6 @@ function Message(options, callback, ...args) {
         reject
       });
       showMessage();
-    }).catch((reason) => {
-      console.log(reason);
     });
   }
   MsgQuen.push({
@@ -94,6 +85,6 @@ function Message(options, callback, ...args) {
   });
   showMessage();
   return false;
-}
+};
 
 export default Message;

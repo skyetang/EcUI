@@ -6,13 +6,15 @@
  */
 
 .dialog {
-  width: 300px;
+  min-width: 300px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%,-50%,0);
   border-radius: @border-radius-base;
   background-color: white;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .dialog-head{
   display: flex;
@@ -27,7 +29,7 @@
 }
 .dialog-content{
   color: @sub-text-color;
-  padding: 20px 20px 40px 20px;
+  padding: 20px 20px 30px 20px;
 }
 
 .dialog-footer{
@@ -65,5 +67,45 @@
   100% {
     transform: translate3d(-50%, -65%, 0);
     opacity: 0;
+  }
+}
+
+/*
+ * message dialog 的特别样式
+ **/
+.dialog-message{
+  max-width: 500px;
+  .dialog-message-content{
+    padding: 20px 20px 30px 20px;
+    text-align: center;
+  }
+  .dialog-footer{
+    justify-content: center!important;
+  }
+
+  .dialog-message-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 36px;
+  }
+  .icon-dialog_message__success{
+    color: #91d938;
+  }
+  .icon-dialog_message__success:after{
+    content: '\e97f';
+  }
+  .icon-dialog_message__warning{
+    color:#FFB616;
+  }
+  .icon-dialog_message__warning:after{
+    content: '\e981';
+  }
+  .icon-dialog_message__failure{
+    color:#FE5A00;
+  }
+  .icon-dialog_message__failure:after{
+    content: '\e980';
   }
 }

@@ -1,17 +1,33 @@
 <template>
   <transition name="dialog-fade">
-    <div class="dialog" v-show="show" >
+    <div class="dialog dialog-message" v-show="show" >
       <div class="dialog-head">
         <span>{{title}}</span>
-        <i v-if="showClose" class="icon-modal__close cursor" @click="handleClick('cancle')"></i>
+        <i v-if="showClose" class="icon-modal__close cursor" @click="handleClick('cancel')"></i>
       </div>
-      <slot>
-        <div class="dialog-content">{{message}}</div>
-      </slot>
+      <div class="dialog-message-content">
+        <div class="dialog-message-icon">
+          <i :class="typeClass"></i>
+        </div>
+        <div>{{message}}</div>
+      </div>
       <div class="dialog-footer">
         <slot name="footer">
-          <ec-button type="danger" @click="handleClick('cancle')">取消</ec-button>
-          <ec-button @click="handleClick('confirm')">确定</ec-button>
+          <ec-button type="danger"
+                     v-if="showCancelButton"
+                     :loading="cancelButtonLoading"
+                     :disabled="confirmButtonDisabled"
+                     :class="[cancelButtonClass]"
+                     @click="handleClick('cancel')">
+            {{cancelButtonText}}
+          </ec-button>
+          <ec-button v-if="showConfirmButton"
+                     :loading="confirmButtonLoading"
+                     :disable="cancelButtonDisabled"
+                     :class="[confirmButtonClass]"
+                     @click="handleClick('confirm')">
+            {{confirmButtonText}}
+          </ec-button>
         </slot>
       </div>
     </div>
@@ -25,30 +41,44 @@
     mixins: [popMixin],
     data() {
       return {
-        title: undefined,
+        title: '提示',
         message: '',
         type: '',
+        action: '',
         customClass: '',
         showClose: true,
         showConfirmButton: true,
-        showCancelButton: false,
-        action: '',
-        confirmButtonText: '',
-        cancelButtonText: '',
+        showCancelButton: true,
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
         confirmButtonLoading: false,
         cancelButtonLoading: false,
-        confirmButtonClass: '',
         confirmButtonDisabled: false,
+        cancelButtonDisabled: false,
+        confirmButtonClass: '',
         cancelButtonClass: '',
-        editorErrorMessage: null,
+        beforeClose: null,
         callback: null
       };
     },
+    computed: {
+      typeClass() {
+        return this.type && `icon-dialog_message__${this.type}`;
+      }
+    },
     methods: {
       handleClick(action) {
+        this.action = action;
+        if (typeof this.beforeClose === 'function') {
+          this.beforeClose(action, this, this.close);
+        } else {
+          this.close();
+        }
+      },
+      close() {
         this.show = false;
-        if (this.callback) {
-          this.callback(action, this);
+        if (this.action) {
+          this.callback(this.action, this);
         }
       }
     }

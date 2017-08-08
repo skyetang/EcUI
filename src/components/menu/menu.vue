@@ -11,7 +11,12 @@
       defaultActive: {
         default: ''
       },
-      defaultOpened: Array,
+      defaultOpened: {
+        type: Array,
+        default() {
+          return [];
+        }
+      },
       uniqueOpened: {
         type: Boolean,
         default: true
@@ -19,20 +24,17 @@
     },
     data() {
       return {
-        activedIndex: this.defaultActive,
-        openedMenus: this.defaultOpened ? this.defaultOpened.slice(0) : [],
+        openedMenus: this.defaultOpened,
         items: {},
         submenus: []
       };
     },
     watch: {
-      defaultActive(val) {
-        const item = this.items[val];
-        if (item) {
-          this.activedIndex = item.index;
-        } else {
-          this.activedIndex = '';
-        }
+      openedMenus: {
+        handler(val) {
+          this.$emit('update:defaultOpened', val);
+        },
+        deep: true
       },
       defaultOpened: {
         handler(val) {
@@ -90,8 +92,7 @@
       handleSubmenuClick(submenu) {
         const { index, indexPath } = submenu;
         const isOpened = this.openedMenus.indexOf(index) !== -1;
-        this.activedIndex = submenu.index;
-
+        this.syncIndex(submenu.index);
         if (isOpened) {
           this.closeMenu(index, indexPath);
           this.$emit('close', index, indexPath);
@@ -108,7 +109,7 @@
        * */
       handleItemClick(item) {
         const { index, indexPath } = item;
-        this.activedIndex = item.index;
+        this.syncIndex(item.index);
         this.$emit('select', index, indexPath, item);
       },
       /**
@@ -117,7 +118,7 @@
        *  ================
        * */
       initOpenedMenu() {
-        const index = this.activedIndex;
+        const index = this.defaultActive;
         const activeItem = this.items[index];
         if (!activeItem) return;
 
@@ -130,6 +131,9 @@
             this.openMenu(keyIndex, submenu.indexPath);
           }
         });
+      },
+      syncIndex(val) {
+        this.$emit('update:defaultActive', val);
       }
     }
   };

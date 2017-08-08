@@ -2,7 +2,8 @@
   <li class="menu-item"
       @click.stop="handleClick"
       :style="paddingStyle"
-      :class="{'is-active':active}">
+      :class="{'is-active':active}"
+      :key="index">
     <slot></slot>
   </li>
 </template>
@@ -15,14 +16,14 @@
     name: 'EcMenuItem',
     props: {
       index: {
-        type: String,
+        type: [String, Number],
         require: true
       },
       value: ''
     },
     computed: {
       active() {
-        return this.index === this.rootMenu.activedIndex;
+        return this.index === this.rootMenu.defaultActive;
       }
     },
     methods: {

@@ -1,31 +1,89 @@
 <template>
-    <div style="width: 300px">
-      <ec-menu default-active="2" :default-opened="['1']">
-        <ec-menu-item index="'0'">没有父级</ec-menu-item>
-        <ec-submenu index="1">
-          <template slot="title">1</template>
-          <ec-menu-item index="1-1">1-1</ec-menu-item>
+  <div style="width: 300px">
+    <ec-menu :default-active.sync="defIndex" :default-opened.sync="defOpened">
+      <ec-submenu v-for="item in menuData"
+                  :index="item.code"
+                  :key="item.code"
+                  :have-children="item.children.length > 0">
+        <template slot="title">
+          {{item.name}}
+        </template>
+        <ec-submenu v-for="info in item.children"
+                    :index="info.code"
+                    :key="item.code"
+                    :have-children="info.children.length > 0">
+          <template slot="title">
+            {{info.name}}
+          </template>
+          <ec-menu-item v-for="less in info.children" :index="less.code" :key="item.code">
+            {{less.name}}
+          </ec-menu-item>
         </ec-submenu>
-        <ec-submenu index="2">
-          <template slot="title">2</template>
-          <ec-submenu index="2-1">
-            <template slot="title">2-1</template>
-            <ec-menu-item index="2-1-1">2-1-1</ec-menu-item>
-          </ec-submenu>
-        </ec-submenu>
-        <ec-submenu index="3" :have-children="false">
-          <template slot="title">3</template>
-        </ec-submenu>
-      </ec-menu>
-    </div>
+      </ec-submenu>
+    </ec-menu>
+    <br>
+    <ec-button @click="reset">重置菜单</ec-button>
+  </div>
 </template>
 
 <script>
   export default {
     data() {
       return {
-        defIndex: '1'
+        defIndex: '1',
+        defOpened: ['1'],
+        menuData: [
+          {
+            code: '1',
+            name: '一级菜单1',
+            children: [
+              { code: '1-1',
+                name: '二级菜单1',
+                children: [] },
+              { code: '1-2',
+                name: '二级菜单2',
+                children: [] },
+              { code: '1-3',
+                name: '二级菜单3',
+                children: [] }]
+          },
+          {
+            code: '2',
+            name: '一级菜单2',
+            children: [
+              { code: '2-1',
+                name: '二级菜单1',
+                children: [] },
+              { code: '2-2',
+                name: '二级菜单2',
+                children: [] },
+              {
+                code: '2-3',
+                name: '二级菜单3',
+                children: [
+                  { code: '2-3-1',
+                    name: '三级菜单1',
+                    children: [] },
+                  { code: '2-3-2',
+                    name: '三级菜单2',
+                    children: [] },
+                  { code: '2-3-3',
+                    name: '三级菜单3',
+                    children: [] }]
+              }
+            ]
+          },
+          { code: '3',
+            name: '一菜单3',
+            children: [] }
+        ]
       };
+    },
+    methods: {
+      reset() {
+        this.defIndex = '1';
+        this.defOpened = ['1'];
+      }
     }
   };
 </script>

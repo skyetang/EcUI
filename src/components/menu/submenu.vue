@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li :key="index">
     <div class="sub-title"
          :class="{'is-active':active, 'is-line-active':lineActive}"
          :style="paddingStyle"
@@ -25,7 +25,7 @@
         default: true
       },
       index: {
-        type: String,
+        type: [String, Number],
         require: true
       },
       value: ''
@@ -46,7 +46,7 @@
         return this.rootMenu.openedMenus.indexOf(this.index) > -1;
       },
       active() {
-        return this.index === this.rootMenu.activedIndex;
+        return this.index === this.rootMenu.defaultActive;
       },
       /**
        * ================

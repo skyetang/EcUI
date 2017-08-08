@@ -42,7 +42,9 @@ module.exports = {
     //对象字面量项尾不能有逗号
     "comma-dangle": [2, "never"],
     //可以给参数重新赋值
-    "no-param-reassign":0
+    "no-param-reassign":0,
+    //关闭换行风格检测
+    'linebreak-style': 0,
   },
   // 启用全局变量
   "globals": {

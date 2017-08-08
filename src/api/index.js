@@ -12,7 +12,7 @@ export default {
   documentary: '/ierp/documentary-note-pc',
   warehouse: '/ierp/warehouse-pc',
   feedback: '/ierp/user-feedback-pc',
-  financial: '/ierp/financial-pc',
+  finance: '/ierp/financial-pc',
   crm: '/ierp/crm-pc',
   task: '/ierp/task-pc',
   service: '/ierp/rbac-pc',

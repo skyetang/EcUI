@@ -1,8 +1,11 @@
 <template>
   <div style="width: 300px">
-    <ec-menu :default-active.sync="defIndex" :default-opened.sync="defOpened">
+    <ec-menu :active.sync="defIndex"
+             :openeds.sync="defOpened"
+              @select="getCondition">
       <ec-submenu v-for="item in menuData"
                   :index="item.code"
+                  :value="item"
                   :key="item.code"
                   :have-children="item.children.length > 0">
         <template slot="title">
@@ -10,12 +13,16 @@
         </template>
         <ec-submenu v-for="info in item.children"
                     :index="info.code"
+                    :value="info"
                     :key="item.code"
                     :have-children="info.children.length > 0">
           <template slot="title">
             {{info.name}}
           </template>
-          <ec-menu-item v-for="less in info.children" :index="less.code" :key="item.code">
+          <ec-menu-item v-for="less in info.children"
+                        :index="less.code"
+                        :value="less"
+                        :key="item.code">
             {{less.name}}
           </ec-menu-item>
         </ec-submenu>
@@ -83,6 +90,9 @@
       reset() {
         this.defIndex = '1';
         this.defOpened = ['1'];
+      },
+      getCondition(val, val1, val2, val3) {
+        console.log(val, val1, val2, val3);
       }
     }
   };

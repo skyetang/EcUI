@@ -46,7 +46,7 @@
         return this.rootMenu.openedMenus.indexOf(this.index) > -1;
       },
       active() {
-        return this.index === this.rootMenu.defaultActive;
+        return this.index === this.rootMenu.active;
       },
       /**
        * ================

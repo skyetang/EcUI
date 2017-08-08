@@ -8,10 +8,10 @@
   export default {
     name: 'EcMenu',
     props: {
-      defaultActive: {
+      active: {
         default: ''
       },
-      defaultOpened: {
+      openeds: {
         type: Array,
         default() {
           return [];
@@ -24,7 +24,7 @@
     },
     data() {
       return {
-        openedMenus: this.defaultOpened,
+        openedMenus: this.openeds,
         items: {},
         submenus: []
       };
@@ -32,11 +32,11 @@
     watch: {
       openedMenus: {
         handler(val) {
-          this.$emit('update:defaultOpened', val);
+          this.$emit('update:openeds', val);
         },
         deep: true
       },
-      defaultOpened: {
+      openeds: {
         handler(val) {
           this.openedMenus = val;
         },
@@ -100,7 +100,7 @@
           this.openMenu(index, indexPath);
           this.$emit('open', index, indexPath);
         }
-        this.$emit('select', index, indexPath, submenu);
+        this.$emit('select', submenu.value, index, indexPath, submenu);
       },
       /**
        * ================
@@ -110,7 +110,7 @@
       handleItemClick(item) {
         const { index, indexPath } = item;
         this.syncIndex(item.index);
-        this.$emit('select', index, indexPath, item);
+        this.$emit('select', item.value, index, indexPath, item);
       },
       /**
        *  ================
@@ -118,7 +118,7 @@
        *  ================
        * */
       initOpenedMenu() {
-        const index = this.defaultActive;
+        const index = this.active;
         const activeItem = this.items[index];
         if (!activeItem) return;
 
@@ -133,7 +133,7 @@
         });
       },
       syncIndex(val) {
-        this.$emit('update:defaultActive', val);
+        this.$emit('update:active', val);
       }
     }
   };

@@ -23,7 +23,7 @@
     },
     computed: {
       active() {
-        return this.index === this.rootMenu.defaultActive;
+        return this.index === this.rootMenu.active;
       }
     },
     methods: {

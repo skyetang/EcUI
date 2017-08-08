@@ -116,7 +116,7 @@
       setCurrentPage(pageNumber) {
         this.pageCurrent = pageNumber;
         this.pageListRefresh();
-        this.pageChange();
+        this.changePage();
       },
       /**
        * 跳转到指定页面
@@ -125,7 +125,7 @@
         if (!this.searchPage.trim() === '' && this.searchPage.trim() <= this.pageArea.max) {
           this.pageCurrent = Number(this.searchPage) - 1;
           this.pageListRefresh();
-          this.pageChange();
+          this.changePage();
         }
       },
 
@@ -142,7 +142,7 @@
           this.pageCurrent = 0;
         }
         this.pageListRefresh();
-        this.pageChange();
+        this.changePage();
         return false;
       },
       /**
@@ -158,7 +158,7 @@
           this.pageCurrent = this.pageArea.max - 1;
         }
         this.pageListRefresh();
-        this.pageChange();
+        this.changePage();
         return false;
       },
       /**
@@ -214,8 +214,8 @@
       /**
        * 触发父组件的pageChange事件
        */
-      pageChange() {
-        this.$emit('pageChange', this.pageCurrent);
+      changePage() {
+        this.$emit('page-change', this.pageCurrent);
       }
     }
   };

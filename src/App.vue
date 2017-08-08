@@ -3,8 +3,8 @@
 </template>
 
 <script>
-  // import DemoIndex from './example/example';
-  import DemoIndex from './example/frame';
+  import DemoIndex from './example/example';
+  // import DemoIndex from './example/frame';
 
   export default {
     components: {

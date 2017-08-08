@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="demo-header">
-      <img class="log-img" src="./assets/images/logo.gif" alt="">
+      <img class="log-img" src="../assets/images/logo.gif" alt="">
       <div class="logo">云集前端Demo</div>
     </div>
     <ul class="demo-sidebar">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ec-pagination :total-page="totalPage"></ec-pagination>
+    <ec-pagination :total-page="totalPage" @page-change="pageChange"></ec-pagination>
   </div>
 </template>
 
@@ -10,6 +10,11 @@
       return {
         totalPage: 20
       };
+    },
+    methods: {
+      pageChange(index) {
+        console.log(index);
+      }
     }
   };
 </script>

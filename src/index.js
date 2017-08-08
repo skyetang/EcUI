@@ -4,14 +4,15 @@
 
 import Axios from 'axios';
 import qs from 'qs';
-import API from './api/index';
-import EcUI from './components/index';
+import API from './api';
+import EcUI from './components';
 import VueQueryString from './utils/vueQueryString';
+import GLOBAL from './utils/global';
 import VueAxios from './utils/vueAxios';
 
 const install = (Vue) => {
   window.API = API;
-  window.PAGE_SIZE = 50;
+  window.GLOBAL = GLOBAL;
   Vue.use(EcUI);
   Vue.use(VueAxios, Axios);
   Vue.use(VueQueryString, qs);

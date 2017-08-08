@@ -47,5 +47,6 @@ module.exports = {
   // 启用全局变量
   "globals": {
     "API": true,
+    "GLOBAL":true
   }
 }

@@ -11,6 +11,10 @@
         totalPage: 20
       };
     },
+    created() {
+      console.log(API);
+      console.log(GLOBAL.PAGE_SIZE);
+    },
     methods: {
       pageChange(index) {
         console.log(index);

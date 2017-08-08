@@ -5,6 +5,7 @@ import Tab from '../example/tab';
 import Menu from '../example/menu';
 import Table from '../example/table';
 import Page from '../example/page';
+import Pagination from '../example/pagination';
 
 export default [
   {
@@ -37,6 +38,11 @@ export default [
     name: 'table',
     title: 'table 表格',
     component: Table
+  }, {
+    path: '/pagination',
+    name: 'pagination',
+    title: 'pagination 翻页',
+    component: Pagination
   }, {
     path: '/page',
     name: 'page',

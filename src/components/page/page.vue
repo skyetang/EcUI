@@ -9,8 +9,7 @@
       <div class="page-body">
         <div class="page-content">
           <slot>
-            <div class="page-item">
-            </div>
+            <div class="page-item"></div>
           </slot>
         </div>
       </div>

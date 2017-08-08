@@ -13,6 +13,8 @@ import { EcTab, EcTabs } from './tab';
 import { EcMenu, EcSubmenu, EcMenuItem } from './menu';
 import EcSideMenu from './sideMenu';
 import EcPage from './page';
+import EcPagination from './pagination';
+
 import Message from './message';
 
 
@@ -31,7 +33,8 @@ const components = {
   EcSubmenu,
   EcMenuItem,
   EcSideMenu,
-  EcPage
+  EcPage,
+  EcPagination
 };
 
 const install = (Vue) => {

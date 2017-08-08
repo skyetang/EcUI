@@ -3,8 +3,11 @@
     <div class="item-head">
       <slot name="head"></slot>
     </div>
-    <div class="item-body">
+    <div class="item-body" :class="{'have-footer':$slots.footer}">
       <slot></slot>
+    </div>
+    <div class="item-footer" v-if="$slots.footer">
+      <slot name="footer"></slot>
     </div>
   </div>
 </template>

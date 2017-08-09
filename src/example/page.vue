@@ -1,5 +1,5 @@
 <template>
-  <ec-page>
+  <ec-page @close="close">
     <div class='page-space'>
       <div>员工档案</div>
       <div>档案编号：ISO20097865</div>
@@ -26,7 +26,7 @@
           <el-input v-model='formData.confirmationDate'></el-input>
         </ec-form-item>
         <ec-form-item label='部门：'>
-          <el-clo :span="12">
+          <el-col :span="12">
             <el-select v-model='formData.roleName' placeholder='请选择'>
               <el-option
                 v-for='item in roleListData'
@@ -35,9 +35,9 @@
                 :value='item.code'>
               </el-option>
             </el-select>
-          </el-clo>
+          </el-col>
           &nbsp;
-          <el-clo :span="12">
+          <el-col :span="12">
             <el-select v-model='formData.roleName' placeholder='请选择'>
               <el-option
                 v-for='item in roleListData'
@@ -46,7 +46,7 @@
                 :value='item.code'>
               </el-option>
             </el-select>
-          </el-clo>
+          </el-col>
         </ec-form-item>
         <ec-form-item label='*手机号码：'>
           <el-input v-model='formData.phone'></el-input>
@@ -88,21 +88,9 @@
       </ec-tabs>
       <div style="margin-top: 20px">
         <el-table border :data="roleListData" class="ec-table-page">
-          <el-table-column
-            prop="code"
-            label="日期"
-            min-width="10">
-          </el-table-column>
-          <el-table-column
-            prop="name"
-            label="姓名"
-            min-width="30">
-          </el-table-column>
-          <el-table-column
-            prop="entCode"
-            label="地址"
-            min-width="50">
-          </el-table-column>
+          <el-table-column prop="code" label="日期" min-width="10"></el-table-column>
+          <el-table-column prop="name" label="姓名" min-width="30"></el-table-column>
+          <el-table-column prop="entCode" label="地址" min-width="50"></el-table-column>
         </el-table>
       </div>
       <div style="margin-top: 20px">
@@ -155,6 +143,11 @@
             authorized: false
           }]
       };
+    },
+    methods: {
+      close() {
+        this.$router.go(-1);
+      }
     }
   };
 </script>

@@ -12,47 +12,65 @@ export default [
   {
     path: '/button',
     name: 'button',
-    title: 'button 按钮',
+    meta: {
+      title: 'button 按钮'
+    },
     component: Button
   }, {
     path: '/dialog',
     name: 'dialog',
-    title: 'dialog 弹出框',
+    meta: {
+      title: 'dialog 弹出框'
+    },
     component: Dialog
   }, {
     path: '/message',
     name: 'message',
-    title: 'message 确认弹框',
+    meta: {
+      title: 'message 确认弹框'
+    },
     component: Message
   }, {
     path: '/tab',
     name: 'tab',
-    title: 'tab 标签',
+    meta: {
+      title: 'tab 标签'
+    },
     component: Tab
   }, {
     path: '/menu',
     name: 'menu',
-    title: 'menu 菜单',
+    meta: {
+      title: 'menu 菜单'
+    },
     component: Menu
   }, {
     path: '/SideMenu',
     name: 'SideMenu',
-    title: 'SideMenu 菜单',
+    meta: {
+      title: 'SideMenu 菜单'
+    },
     component: SideMenu
   }, {
     path: '/table',
     name: 'table',
-    title: 'table 表格',
+    meta: {
+      title: 'table 表格'
+    },
     component: Table
   }, {
     path: '/pagination',
     name: 'pagination',
-    title: 'pagination 翻页',
+    meta: {
+      title: 'pagination 翻页'
+    },
     component: Pagination
   }, {
     path: '/page',
     name: 'page',
-    title: 'page 详情页',
+    meta: {
+      title: 'page 详情页'
+    },
     component: Page
   }
 ];

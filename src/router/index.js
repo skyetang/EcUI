@@ -1,10 +1,18 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import navConfig from './router.config';
+import RouterConfig from './router.config';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: 'history',
-  routes: navConfig
+  routes: RouterConfig
 });
+
+router.afterEach((route) => {
+  if (route.meta.title) {
+    document.title = `${route.meta.title}-云集前端`;
+  }
+});
+
+export default router;

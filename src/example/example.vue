@@ -5,8 +5,8 @@
       <div class="logo">云集前端Demo</div>
     </div>
     <ul class="demo-sidebar">
-      <li class="sidebar-item" v-for="(item,index) in RouterConfig" :key="index">
-        <router-link :to="item">{{item.title}}</router-link>
+      <li class="sidebar-item" v-for="(item, index) in RouterConfig" :key="index">
+        <router-link :to="item">{{item.meta.title}}</router-link>
       </li>
     </ul>
     <div class="demo-content">

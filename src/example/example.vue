@@ -61,7 +61,8 @@
 
   .demo-sidebar {
     position: fixed;
-    width: 260px;
+    width: 220px;
+    height: calc(~'100% - 61px');
     top: 61px;
     left: 0;
     overflow-y: auto;
@@ -86,7 +87,7 @@
   }
 
   .demo-content {
-    padding-left: 260px;
+    padding-left: 220px;
     padding-top: 61px;
     height: 100%;
 
@@ -94,6 +95,7 @@
       padding: 20px;
       height: 100%;
       overflow: auto;
+      background-color: white;
     }
   }
 </style>

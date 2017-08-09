@@ -3,6 +3,7 @@ import Dialog from '../example/dialog';
 import Message from '../example/message';
 import Tab from '../example/tab';
 import Menu from '../example/menu';
+import SideMenu from '../example/sideMenu';
 import Table from '../example/table';
 import Page from '../example/page';
 import Pagination from '../example/pagination';
@@ -33,6 +34,11 @@ export default [
     name: 'menu',
     title: 'menu 菜单',
     component: Menu
+  }, {
+    path: '/SideMenu',
+    name: 'SideMenu',
+    title: 'SideMenu 菜单',
+    component: SideMenu
   }, {
     path: '/table',
     name: 'table',

@@ -66,6 +66,28 @@
         <ec-tab value="contact"><i class="icon-contacts icon-left"></i>联系人</ec-tab>
         <ec-tab value="address"><i class="icon-freight__address"></i>货运地址</ec-tab>
       </ec-tabs>
+      <div style="margin-top: 20px">
+        <el-table :data="roleListData" class="ec-table-page">
+          <el-table-column
+            prop="code"
+            label="日期"
+            min-width="10">
+          </el-table-column>
+          <el-table-column
+            prop="name"
+            label="姓名"
+            min-width="30">
+          </el-table-column>
+          <el-table-column
+            prop="entCode"
+            label="地址"
+            min-width="50">
+          </el-table-column>
+        </el-table>
+      </div>
+      <div style="margin-top: 20px">
+        <ec-button>新增</ec-button>
+      </div>
     </ec-page-item>
     <template slot='footer'>
       <ec-button>测试footer</ec-button>

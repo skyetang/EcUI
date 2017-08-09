@@ -15,7 +15,7 @@
       </template>
       <ul v-if="item.items.length >0 ">
         <li v-for="secItem in item.items">
-          <router-link :to="{ path: secItem.url }">
+          <router-link to="/" v-on:click.native="clickMenu(secItem)">
             <span>{{secItem.name}}</span>
           </router-link>
         </li>
@@ -32,12 +32,12 @@
         type: Array,
         require: true
       }
+    },
+    methods: {
+      clickMenu(item) {
+        this.$router.push({ path: item.url });
+        sessionStorage.setItem('PostCode', item.postCode);
+      }
     }
   };
 </script>
-
-<style lang="less">
-
-</style>
-
-

@@ -88,8 +88,8 @@
     },
     methods: {
       reset() {
-        this.defIndex = '1';
-        this.defOpened = ['1'];
+        this.defIndex = '2';
+        this.defOpened = ['2'];
       },
       getCondition(val, val1, val2, val3) {
         console.log(val, val1, val2, val3);

@@ -15,6 +15,14 @@ export default function plugin(Vue, axios) {
   }
 
   VueAxios.axios = axios;
+  axios.interceptors.request.use((config) => {
+    if (sessionStorage.getItem('PostCode') === null
+      || sessionStorage.getItem('PostCode') === undefined) {
+      return config;
+    }
+    config.headers.postCode = sessionStorage.getItem('PostCode');
+    return config;
+  });
 
   Object.defineProperties(VueAxios.prototype, {
     $http: {

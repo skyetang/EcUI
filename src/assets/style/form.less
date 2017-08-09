@@ -8,22 +8,29 @@
 
 .page-form{
   font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   .form-item{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     margin-bottom: 20px;
-    width: 33%;
 
     .form-item-label{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
       width: 80px;
-      display: inline-block;
-      text-align: right;
-      float: left;
+      flex-shrink: 0;
       line-height: 1;
       padding: 8px 15px 8px 0;
     }
     .form-item-content{
-      float: left;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
       line-height: 28px;
       width: 210px;
 

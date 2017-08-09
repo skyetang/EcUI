@@ -10,6 +10,10 @@
     props: {
       labelWidth: {
         type: String
+      },
+      inline: {
+        type: Boolean,
+        default: true
       }
     }
   };

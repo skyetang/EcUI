@@ -27,7 +27,6 @@
 
   .tab-item{
     .tab-items;
-    flex: 1 1 auto;
     height: 52px;
   }
   .is-active{
@@ -42,7 +41,6 @@
 
   .tab-item{
     .tab-items;
-    flex: 1 1 auto;
     height: 42px;
     border:1px solid transparent;
     border-top:2px solid transparent;
@@ -56,6 +54,16 @@
     border-top-color:@link-hover-color;
     background-color: white;
     color: @link-hover-color;
+  }
+}
+.tab-min-width{
+  .tab-item{
+    min-width:120px!important;
+  }
+}
+.tab-flex-width{
+  .tab-item{
+    flex: 1 1 auto;
   }
 }
 

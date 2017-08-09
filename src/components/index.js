@@ -12,7 +12,7 @@ import EcDialog from './dialog';
 import { EcTab, EcTabs } from './tab';
 import { EcMenu, EcSubmenu, EcMenuItem } from './menu';
 import EcSideMenu from './sideMenu';
-import EcPage from './page';
+import { EcPage, EcPageItem } from './page';
 import EcPagination from './pagination';
 import { EcForm, EcFormItem } from './form';
 import Message from './message';
@@ -34,6 +34,7 @@ const components = {
   EcMenuItem,
   EcSideMenu,
   EcPage,
+  EcPageItem,
   EcPagination,
   EcForm,
   EcFormItem

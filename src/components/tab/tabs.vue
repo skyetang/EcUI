@@ -1,5 +1,5 @@
 <template>
-  <div :class="theme">
+  <div :class="[theme, width]">
     <slot></slot>
   </div>
 </template>
@@ -12,11 +12,22 @@
       type: {
         type: String,
         default: 'bottom'
+      },
+      minWidth: {
+        type: Boolean,
+        default: false
       }
     },
     computed: {
       theme() {
         return `tab-${this.type}-wrapper`;
+      },
+      width() {
+        let c = 'tab-flex-width';
+        if (this.minWidth) {
+          c = 'tab-min-width';
+        }
+        return c;
       }
     },
     methods: {

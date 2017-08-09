@@ -3,14 +3,16 @@
     <div class="page-wrapper">
       <div class="page-header">
         <div class="header-item"><i class="gray icon-return" @click="close"></i></div>
-        <div class="header-item">{{title}}</div>
+        <div class="header-item">
+          <slot name="title">
+            {{title}}
+          </slot>
+        </div>
         <div class="header-item"><i class="gray icon-innerpage__close" @click="close"></i></div>
       </div>
       <div class="page-body">
         <div class="page-content">
-          <slot>
-            <div class="page-item"></div>
-          </slot>
+          <slot></slot>
         </div>
       </div>
       <div class="page-footer">

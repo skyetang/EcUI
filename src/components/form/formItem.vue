@@ -1,9 +1,9 @@
 <template>
-    <div class="form-item clear-fix">
+    <div class="form-item clear-fix" :style="itemStyle" :class="{'width-100':singleLine || !parentForm.inline}">
       <label class="form-item-label" :style="labelStyle" v-if="label">
         {{label}}
       </label>
-      <div class="form-item-content">
+      <div class="form-item-content" :style="contentStyle">
         <slot></slot>
       </div>
     </div>
@@ -18,14 +18,33 @@
       },
       label: {
         type: String
+      },
+      singleLine: {
+        type: Boolean,
+        default: false
       }
     },
     computed: {
+      itemStyle() {
+        const style = {};
+        if (this.parentForm.inline) {
+          style.width = '30%';
+        }
+        return style;
+      },
       labelStyle() {
         const style = {};
         const width = this.lableWidth || this.parentForm.labelWidth;
         if (width) {
           style.width = width;
+        }
+        return style;
+      },
+      contentStyle() {
+        const style = {};
+        if (this.singleLine) {
+          style.flex = '1';
+          style.paddingRight = '20px';
         }
         return style;
       },

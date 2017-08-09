@@ -4,8 +4,8 @@
       <div>员工档案</div>
       <div>档案编号：ISO20097865</div>
     </div>
-    <div class='page-item'>
-      <ec-form label-width="90px">
+    <ec-page-item>
+      <ec-form label-width="90px" :inline="true">
         <ec-form-item label="工号：">
           <el-input v-model='formData.jobNumber'></el-input>
         </ec-form-item>
@@ -14,8 +14,7 @@
           <el-radio class='radio' v-model='formData.sex' label='2'>女</el-radio>
         </ec-form-item>
         <ec-form-item label='入职时间：'>
-          <el-date-picker v-model='formData.enterDate' type='datetime' placeholder='选择日期'>
-          </el-date-picker>
+          <el-date-picker v-model='formData.enterDate' type='datetime' placeholder='选择日期'></el-date-picker>
         </ec-form-item>
         <ec-form-item label="姓名：">
           <el-input v-model='formData.jobNumber'></el-input>
@@ -47,58 +46,27 @@
             </el-option>
           </el-select>
         </ec-form-item>
-        <ec-form-item style="width:100%" label='*工作邮箱：'>
+        <ec-form-item  label='*工作邮箱：'>
           <el-input v-model='formData.email'></el-input>
         </ec-form-item>
       </ec-form>
-      </el-form>
-      <!--<el-form :inline="true"  label-width='120px' :model='formData' class='demo-form-inline'>
-          <el-form-item style="width: 400px" label='工号：'>
-            <el-input v-model='formData.jobNumber'></el-input>
-          </el-form-item>
-        <el-form-item label='姓名：'>
-          <el-input v-model='formData.employeeName'></el-input>
-        </el-form-item>
-        <el-form-item label='*身份证号码：'>
-          <el-input v-model='formData.idCard'></el-input>
-        </el-form-item>
-        <el-form-item label='*转证日期：'>
-          <el-input v-model='formData.confirmationDate'></el-input>
-        </el-form-item>
-        <el-form-item label='部门：'>
-          <el-input v-model='formData.idCard'></el-input>
-        </el-form-item>
-        <el-form-item label='*手机号码：'>
-          <el-input v-model='formData.phone'></el-input>
-        </el-form-item>
-        <el-form-item label='*工作邮箱：'>
-          <el-input v-model='formData.email'></el-input>
-        </el-form-item>
-        <el-form-item label='性别：'>
-          <el-radio class='radio' v-model='formData.sex' label='1'>男</el-radio>
-          <el-radio class='radio' v-model='formData.sex' label='2'>女</el-radio>
-        </el-form-item>
-        <el-form-item label='入职时间：'>
-          <el-date-picker v-model='formData.enterDate' type='datetime' placeholder='选择日期'>
-          </el-date-picker>
-        </el-form-item>
-        <el-form-item label='岗位：'>
-          <el-select v-model='formData.roleName' placeholder='请选择'>
-            <el-option
-              v-for='item in roleListData'
-              :key='item.code'
-              :label='item.name'
-              :value='item.code'>
-            </el-option>
-          </el-select>
-        </el-form-item>
-      </el-form>-->
-    </div>
-    <div class='page-item'>
-      <el-form>
-        
-      </el-form>
-    </div>
+    </ec-page-item>
+    <ec-page-item>
+      <ec-form label-width="90px">
+        <ec-form-item label="上传图片：">
+          <el-input v-model="formData.phone">
+            <template slot="append"><i class="icon-add"></i></template>
+          </el-input>
+        </ec-form-item>
+      </ec-form>
+    </ec-page-item>
+    <ec-page-item>
+      <ec-tabs :value.sync="tabStatus" type="top" :min-width="true">
+        <ec-tab value="level"><i class="icon-contacts icon-left"></i>评级信息</ec-tab>
+        <ec-tab value="contact"><i class="icon-contacts icon-left"></i>联系人</ec-tab>
+        <ec-tab value="address"><i class="icon-freight__address"></i>货运地址</ec-tab>
+      </ec-tabs>
+    </ec-page-item>
     <template slot='footer'>
       <ec-button>测试footer</ec-button>
     </template>
@@ -109,6 +77,7 @@
   export default {
     data() {
       return {
+        tabStatus: 'level',
         formData: {
           jobNumber: '',
           employeeName: '',

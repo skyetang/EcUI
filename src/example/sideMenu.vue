@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ec-side-menu :data='menuData'></ec-side-menu>
+    <ec-side-menu :value='menuData'></ec-side-menu>
   </div>
 </template>
 

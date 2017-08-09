@@ -67,7 +67,8 @@
             <div class="table-item-wrap">
               <p>201707070001</p>
               <p>{{ scope.row.address }}</p>
-              <p>自制件</p>
+              <p> <el-input></el-input></p>
+              <p> <el-input></el-input></p>
             </div>
           </template>
         </el-table-column>

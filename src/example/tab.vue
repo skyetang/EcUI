@@ -4,6 +4,7 @@
         <ec-tabs :value.sync="checkedTab" @change="tabChange">
           <ec-tab value="one">未审核</ec-tab>
           <ec-tab value="two">已审核</ec-tab>
+          <ec-tab value="three">已审核</ec-tab>
         </ec-tabs>
       </div>
 

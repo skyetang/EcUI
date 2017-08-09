@@ -37,11 +37,26 @@ input[type='number']{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+//清除浮动
+.clear-fix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clear-fix {
+  display: inline-block;
+}
 .icon-right{
   margin-left: 4px;
 }
 .icon-left{
   margin-right: 4px;
+}
+.width-100{
+  width: 100%;
 }
 .icon-loading{
   animation: rotating 1s linear infinite;
@@ -62,6 +77,10 @@ input[type='number']{
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  padding: 10px 0;
+  >p{
+    margin-bottom: 5px;
+  }
 }
 .flex-space{
   width: 100%;

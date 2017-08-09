@@ -70,13 +70,12 @@ const showMessage = () => {
     if (MsgQuen.length > 0) {
       currentMsg = MsgQuen.shift();
       const options = currentMsg.options;
-      console.log(options);
       Object.keys(options).forEach((key) => {
         if (Object.prototype.hasOwnProperty.call(options, key)) {
           instance[key] = options[key];
         }
       });
-      if (options.callback === undefined) {
+      if (options.callback === undefined || options.callback === null) {
         instance.callback = defaultCallback;
       }
     }

@@ -1,0 +1,42 @@
+/*
+ * 重置部分el表单，输入框的样式
+ *
+ */
+.el-input__inner{
+  height: 28px!important;
+}
+
+.page-form{
+  font-size: 12px;
+
+  .form-item{
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 33%;
+
+    .form-item-label{
+      width: 80px;
+      display: inline-block;
+      text-align: right;
+      float: left;
+      line-height: 1;
+      padding: 8px 15px 8px 0;
+    }
+    .form-item-content{
+      float: left;
+      line-height: 28px;
+      width: 210px;
+
+      .el-select{
+        width: 100%!important;
+      }
+      .el-date-editor.el-input{
+        width: 100%!important;
+      }
+      .el-input-group__append, .el-input-group__prepend{
+        padding: 0 6px!important;
+      }
+    }
+  }
+}
+

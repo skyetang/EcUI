@@ -87,7 +87,7 @@
         <ec-tab value="address"><i class="icon-freight__address"></i>货运地址</ec-tab>
       </ec-tabs>
       <div style="margin-top: 20px">
-        <el-table :data="roleListData" class="ec-table-page">
+        <el-table border :data="roleListData" class="ec-table-page">
           <el-table-column
             prop="code"
             label="日期"

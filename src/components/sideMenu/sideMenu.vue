@@ -8,14 +8,14 @@
         </a>
       </template>
       <template v-else>
-        <router-link :to="{ path:item.url}">
+        <router-link :to="{path:item.url}" @click.native="clickMenu(secItem)>
           <span class="icon icon-left" :class="[item.style != '' && item.style != null ? item.style : '']"></span>
           <span>{{item.name}}</span>
         </router-link>
       </template>
       <ul v-if="item.items.length >0 ">
         <li v-for="secItem in item.items">
-          <router-link to="/" v-on:click.native="clickMenu(secItem)">
+          <router-link :to="{path:secItem.url}" @click.native="clickMenu(secItem)">
             <span>{{secItem.name}}</span>
           </router-link>
         </li>
@@ -35,7 +35,6 @@
     },
     methods: {
       clickMenu(item) {
-        this.$router.push({ path: item.url });
         sessionStorage.setItem('PostCode', item.postCode);
       }
     }

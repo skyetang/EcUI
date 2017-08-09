@@ -26,7 +26,27 @@
           <el-input v-model='formData.confirmationDate'></el-input>
         </ec-form-item>
         <ec-form-item label='部门：'>
-          <el-input v-model='formData.idCard'></el-input>
+          <el-clo :span="12">
+            <el-select v-model='formData.roleName' placeholder='请选择'>
+              <el-option
+                v-for='item in roleListData'
+                :key='item.code'
+                :label='item.name'
+                :value='item.code'>
+              </el-option>
+            </el-select>
+          </el-clo>
+          &nbsp;
+          <el-clo :span="12">
+            <el-select v-model='formData.roleName' placeholder='请选择'>
+              <el-option
+                v-for='item in roleListData'
+                :key='item.code'
+                :label='item.name'
+                :value='item.code'>
+              </el-option>
+            </el-select>
+          </el-clo>
         </ec-form-item>
         <ec-form-item label='*手机号码：'>
           <el-input v-model='formData.phone'></el-input>

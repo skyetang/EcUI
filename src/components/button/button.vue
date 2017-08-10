@@ -13,7 +13,7 @@
     props: {
       type: {
         type: String,
-        default: 'default'
+        default: 'primary'
       },
       loading: {
         type: Boolean,

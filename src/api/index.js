@@ -18,7 +18,7 @@ export default {
   service: '/ierp/rbac-pc',
   hr: '/ierp/hr-pc',
   expense: '/ierp/expense-pc',
-  setting: '/ierp/system-setting-pc',
+  settings: '/ierp/system-setting-pc',
   dictionary: '/ierp/dictionary-pc',
   authority: '/ierp/data-authority-pc'
 };

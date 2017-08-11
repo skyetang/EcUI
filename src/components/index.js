@@ -16,6 +16,7 @@ import { EcPage, EcPageItem } from './page';
 import EcPagination from './pagination';
 import { EcForm, EcFormItem } from './form';
 import confirm from './confirm';
+import EcUpload from './upload';
 
 
 const components = {
@@ -37,7 +38,8 @@ const components = {
   EcPageItem,
   EcPagination,
   EcForm,
-  EcFormItem
+  EcFormItem,
+  EcUpload
 };
 
 const install = (Vue) => {

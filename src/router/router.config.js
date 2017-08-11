@@ -7,6 +7,7 @@ import SideMenu from '../example/sideMenu';
 import Table from '../example/table';
 import Page from '../example/page';
 import Pagination from '../example/pagination';
+import Upload from '../example/upload';
 
 export default [
   {
@@ -72,5 +73,12 @@ export default [
       title: 'page 详情页'
     },
     component: Page
+  }, {
+    path: '/upload',
+    name: 'upload',
+    meta: {
+      title: 'upload  上传'
+    },
+    component: Upload
   }
 ];

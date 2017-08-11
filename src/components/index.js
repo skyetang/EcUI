@@ -15,7 +15,7 @@ import EcSideMenu from './sideMenu';
 import { EcPage, EcPageItem } from './page';
 import EcPagination from './pagination';
 import { EcForm, EcFormItem } from './form';
-import Message from './message';
+import confirm from './confirm';
 
 
 const components = {
@@ -44,7 +44,7 @@ const install = (Vue) => {
   Object.keys(components).forEach((key) => {
     Vue.component(components[key].name, components[key]);
   });
-  Vue.prototype.$message = Message;
+  Vue.prototype.$ecConfirm = confirm;
 };
 
 export default { install };

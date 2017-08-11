@@ -9,7 +9,7 @@
   export default {
     methods: {
       confirmDialog(value) {
-        this.$message({
+        this.$ecConfirm({
           title: '提示',
           message: '确认删除吗？',
           type: 'warning',
@@ -35,7 +35,7 @@
         );
       },
       confirmDialog2() {
-        this.$message({
+        this.$ecConfirm({
           title: '提示',
           message: '删除'
         }).then(

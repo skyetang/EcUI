@@ -1,6 +1,6 @@
 import Button from '../example/button';
 import Dialog from '../example/dialog';
-import Message from '../example/message';
+import Confirm from '../example/confirm';
 import Tab from '../example/tab';
 import Menu from '../example/menu';
 import SideMenu from '../example/sideMenu';
@@ -24,12 +24,12 @@ export default [
     },
     component: Dialog
   }, {
-    path: '/message',
-    name: 'message',
+    path: '/confirm',
+    name: 'confirm',
     meta: {
-      title: 'message 确认弹框'
+      title: 'confirm 确认弹框'
     },
-    component: Message
+    component: Confirm
   }, {
     path: '/tab',
     name: 'tab',

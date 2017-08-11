@@ -24,7 +24,7 @@
       },
       size: {
         type: Number,
-        default: 10 * 1024 * 1024
+        default: 5 * 1024 * 1024
       },
       action: {
         type: String,
@@ -43,6 +43,7 @@
       },
       fileChanged(e) {
         let files = Array.prototype.slice.call(e.target.files);
+        if (files.length === 0) return;
         if (this.multiple && files.length > 1) {
           if (!this.check(files)) {
             this.$message({
@@ -81,7 +82,7 @@
             this.uploading = false;
             if (success) {
               data.fileName = file.name;
-              this.$emit('confirm', data);
+              this.$emit('success', data);
             } else {
               this.$message({
                 message: errMsg,

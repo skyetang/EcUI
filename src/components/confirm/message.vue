@@ -13,7 +13,7 @@
       </div>
       <div class="dialog-footer">
         <slot name="footer">
-          <ec-button type="danger"
+          <ec-button type="plain-default"
                      v-if="showCancelButton"
                      :loading="cancelButtonLoading"
                      :disabled="confirmButtonDisabled"

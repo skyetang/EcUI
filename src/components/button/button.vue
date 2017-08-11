@@ -3,7 +3,7 @@
           @click="handleClick"
           :type="nativeType"
           :class="['button',type ? 'button-' + type : '',{'is-disabled': disabled || loading}]">
-    <i class="icon-add icon-left icon-loading" v-show="loading"></i>
+    <i class="icon-left icon-loading" v-show="loading"></i>
     <slot></slot>
   </button>
 </template>

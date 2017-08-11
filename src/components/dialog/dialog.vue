@@ -8,8 +8,8 @@
       <slot></slot>
       <div class="dialog-footer">
         <slot name="footer">
-          <ec-button type="danger" @click="cancel">取消</ec-button>
-          <ec-button @click="confirm">确定</ec-button>
+          <ec-button :loading="cancelLoading" type="plain-default" @click="cancel">取消</ec-button>
+          <ec-button :loading="confirmLoading" @click="confirm">确定</ec-button>
         </slot>
       </div>
     </div>
@@ -30,6 +30,14 @@
       showClose: {
         type: Boolean,
         default: true
+      },
+      confirmLoading: {
+        type: Boolean,
+        default: false
+      },
+      cancelLoading: {
+        type: Boolean,
+        default: false
       }
     },
     methods: {

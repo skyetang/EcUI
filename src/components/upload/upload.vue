@@ -24,11 +24,11 @@
       },
       size: {
         type: Number,
-        default: 5 * 1024 * 1024
+        default: 10 * 1024 * 1024
       },
       action: {
         type: String,
-        default: ''
+        require: true
       }
     },
     data() {
@@ -75,7 +75,7 @@
         this.uploading = true;
         const formData = new FormData();
         formData.append('file', file);
-        this.$http.post(this.action || `${API.ierp}/v1/file/upload`, formData).then(
+        this.$http.post(this.action, formData).then(
           (res) => {
             const { success, data, errMsg } = res.data;
             this.uploading = false;

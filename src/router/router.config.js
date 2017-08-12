@@ -8,6 +8,8 @@ import Table from '../example/table';
 import Page from '../example/page';
 import Pagination from '../example/pagination';
 import Upload from '../example/upload';
+import PreviewImage from '../example/previewImage';
+
 
 export default [
   {
@@ -80,5 +82,12 @@ export default [
       title: 'upload  上传'
     },
     component: Upload
+  }, {
+    path: '/previewImage',
+    name: 'previewImage',
+    meta: {
+      title: 'previewImage 图片预览'
+    },
+    component: PreviewImage
   }
 ];

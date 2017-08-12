@@ -57,11 +57,11 @@
     z-index: 1000;
   }
 
-  .mask-fade-enter-active {
+  .mask-fade-enter-active,.mask-fade-leave-active {
     transition: opacity .45s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  .mask-fade-enter {
+  .mask-fade-enter,.mask-fade-leave-to {
     opacity: 0 !important;
   }
 </style>

@@ -135,10 +135,6 @@
           this.$nextTick(() => {
             this.autoSize();
           });
-        } else {
-          this.$nextTick(() => {
-            this.currentIndex = 0;
-          });
         }
       }
     }

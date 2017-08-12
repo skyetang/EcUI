@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="down" @click.stop="">
-        <button class="btn-xl-def" @click="$downFile(currentImgObj)"><i class="icon-download down-i"></i>下载</button>
+        <ec-button type="plain-default" @click="$downFile(currentImgObj)"><i class="icon-download icon-left"></i>下载</ec-button>
       </div>
     </div>
   </transition>

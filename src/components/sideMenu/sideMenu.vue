@@ -8,7 +8,7 @@
         </a>
       </template>
       <template v-else>
-        <router-link :to="{path:item.url}" @click.native="clickMenu(secItem)>
+        <router-link :to="{path:item.url}" @click.native="clickMenu(secItem)">
           <span class="icon icon-left" :class="[item.style != '' && item.style != null ? item.style : '']"></span>
           <span>{{item.name}}</span>
         </router-link>

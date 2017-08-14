@@ -49,15 +49,14 @@ input[type='number']{
 .clear-fix {
   display: inline-block;
 }
+
 .icon-right{
   margin-left: 4px;
 }
 .icon-left{
   margin-right: 4px;
 }
-.width-100{
-  width: 100%!important;
-}
+
 .icon-loading{
   animation: rotating 1s linear infinite;
 }
@@ -69,9 +68,11 @@ input[type='number']{
     transform: rotate(360deg);
   }
 }
+
 .cursor{
   cursor: pointer;
 }
+
 .table-item-wrap{
   display: flex;
   align-items: flex-start;
@@ -82,12 +83,14 @@ input[type='number']{
     margin-bottom: 5px;
   }
 }
+
 .flex-space{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .page-space{
   position: relative;
   display: flex;
@@ -114,4 +117,23 @@ input[type='number']{
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+}
+
+
+/*
+ * 共用的边距
+ *
+ **/
+
+.pct100{
+  width: 100%!important;
+}
+.mt20{
+  margin-top: 20px;
+}
+.mr4{
+  margin-right: 4px;
+}
+.ml4{
+  margin-left: 4px;
 }

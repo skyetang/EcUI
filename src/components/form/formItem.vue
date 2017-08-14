@@ -1,5 +1,5 @@
 <template>
-    <div class="form-item clear-fix" :style="itemStyle" :class="{'width-100':singleLine || !parentForm.inline}">
+    <div class="form-item clear-fix" :style="itemStyle" :class="{'pct100':singleLine || !parentForm.inline}">
       <label class="form-item-label" :style="labelStyle" v-if="label">
         {{label}}
       </label>

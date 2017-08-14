@@ -5,7 +5,7 @@
       <div>档案编号：ISO20097865</div>
     </div>
     <ec-page-item>
-      <ec-form label-width="90px" :inline="true">
+      <ec-form label-width="90px">
         <ec-form-item label="工号：">
           <el-input v-model='formData.jobNumber'></el-input>
         </ec-form-item>
@@ -86,16 +86,14 @@
         <ec-tab value="contact"><i class="icon-contacts icon-left"></i>联系人</ec-tab>
         <ec-tab value="address"><i class="icon-freight__address"></i>货运地址</ec-tab>
       </ec-tabs>
-      <div style="margin-top: 20px">
+      <div class="mt20">
         <el-table border :data="roleListData" class="ec-table-page">
           <el-table-column prop="code" label="日期" min-width="10"></el-table-column>
           <el-table-column prop="name" label="姓名" min-width="30"></el-table-column>
           <el-table-column prop="entCode" label="地址" min-width="50"></el-table-column>
         </el-table>
       </div>
-      <div style="margin-top: 20px">
-        <ec-button>新增</ec-button>
-      </div>
+      <ec-button class="mt20" type="plain-default">新增</ec-button>
     </ec-page-item>
     <template slot='footer'>
       <ec-button>测试footer</ec-button>
